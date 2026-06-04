@@ -1,0 +1,153 @@
+{
+  "format_version": "1.12.0",
+  "minecraft:spawn_rules": [
+    {
+      "description": {
+        "identifier": "dragon:fire_dragon_spawn"
+      },
+      "conditions": [
+        {
+          "minecraft:spawns_on_surface": {}
+        },
+        {
+          "minecraft:biome_filter": [
+            {
+              "test": "biome_tag",
+              "operator": "==",
+              "value": "nether"
+            }
+          ]
+        },
+        {
+          "minecraft:brightness_filter": {
+            "min": 0,
+            "max": 7,
+            "adjust_for_weather": true
+          }
+        },
+        {
+          "minecraft:difficulty_filter": {
+            "min": "easy",
+            "max": "hard"
+          }
+        },
+        {
+          "minecraft:player_in_volume_filter": {}
+        }
+      ],
+      "weight": 8,
+      "identifier": "dragon:fire_dragon"
+    },
+    {
+      "description": {
+        "identifier": "dragon:ice_dragon_spawn"
+      },
+      "conditions": [
+        {
+          "minecraft:spawns_on_surface": {}
+        },
+        {
+          "minecraft:biome_filter": [
+            {
+              "test": "biome_tag",
+              "operator": "==",
+              "value": "snow"
+            }
+          ]
+        },
+        {
+          "minecraft:brightness_filter": {
+            "min": 0,
+            "max": 7,
+            "adjust_for_weather": true
+          }
+        },
+        {
+          "minecraft:difficulty_filter": {
+            "min": "easy",
+            "max": "hard"
+          }
+        },
+        {
+          "minecraft:player_in_volume_filter": {}
+        }
+      ],
+      "weight": 6,
+      "identifier": "dragon:ice_dragon"
+    },
+    {
+      "description": {
+        "identifier": "dragon:forest_dragon_spawn"
+      },
+      "conditions": [
+        {
+          "minecraft:spawns_on_surface": {}
+        },
+        {
+          "minecraft:biome_filter": [
+            {
+              "test": "biome_tag",
+              "operator": "==",
+              "value": "forest"
+            }
+          ]
+        },
+        {
+          "minecraft:brightness_filter": {
+            "min": 0,
+            "max": 7,
+            "adjust_for_weather": true
+          }
+        },
+        {
+          "minecraft:difficulty_filter": {
+            "min": "easy",
+            "max": "hard"
+          }
+        },
+        {
+          "minecraft:player_in_volume_filter": {}
+        }
+      ],
+      "weight": 4,
+      "identifier": "dragon:forest_dragon"
+    },
+    {
+      "description": {
+        "identifier": "dragon:sky_dragon_spawn"
+      },
+      "conditions": [
+        {
+          "minecraft:spawns_on_surface": {}
+        },
+        {
+          "minecraft:biome_filter": [
+            {
+              "test": "biome_tag",
+              "operator": "==",
+              "value": "mountain"
+            }
+          ]
+        },
+        {
+          "minecraft:brightness_filter": {
+            "min": 8,
+            "max": 15,
+            "adjust_for_weather": true
+          }
+        },
+        {
+          "minecraft:difficulty_filter": {
+            "min": "easy",
+            "max": "hard"
+          }
+        },
+        {
+          "minecraft:player_in_volume_filter": {}
+        }
+      ],
+      "weight": 5,
+      "identifier": "dragon:sky_dragon"
+    }
+  ]
+}
