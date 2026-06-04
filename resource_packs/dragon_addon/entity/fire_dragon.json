@@ -1,0 +1,26 @@
+{
+  "format_version": "1.0.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dragon:fire_dragon",
+      "min_engine_version": "1.21.0",
+      "geometry": "geometry.dragon.fire_dragon",
+      "materials": {
+        "*": "entity_alphatest"
+      },
+      "textures": {
+        "*": "textures/entity/fire_dragon"
+      },
+      "animations": {
+        "idle": "animation.fire_dragon.idle",
+        "move": "animation.fire_dragon.move",
+        "attack": "animation.fire_dragon.attack"
+      },
+      "animation_controllers": [
+        {
+          "play": "controller.animation.fire_dragon.general"
+        }
+      ]
+    }
+  }
+}
