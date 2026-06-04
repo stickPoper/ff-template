@@ -1,0 +1,9 @@
+{
+  "format_version": "1.0.0",
+  "textures": {
+    "dragon:fire_dragon": "textures/entity/fire_dragon",
+    "dragon:ice_dragon": "textures/entity/ice_dragon",
+    "dragon:forest_dragon": "textures/entity/forest_dragon",
+    "dragon:sky_dragon": "textures/entity/sky_dragon"
+  }
+}
