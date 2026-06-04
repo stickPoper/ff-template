@@ -1,0 +1,25 @@
+{
+  "format_version": "1.0.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dragon:forest_dragon",
+      "min_engine_version": "1.21.0",
+      "geometry": "geometry.dragon.forest_dragon",
+      "materials": {
+        "*": "entity_alphatest"
+      },
+      "textures": {
+        "*": "textures/entity/forest_dragon"
+      },
+      "animations": {
+        "idle": "animation.forest_dragon.idle",
+        "move": "animation.forest_dragon.move"
+      },
+      "animation_controllers": [
+        {
+          "play": "controller.animation.forest_dragon.general"
+        }
+      ]
+    }
+  }
+}
