@@ -1,0 +1,25 @@
+{
+  "format_version": "1.0.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "dragon:ice_dragon",
+      "min_engine_version": "1.21.0",
+      "geometry": "geometry.dragon.ice_dragon",
+      "materials": {
+        "*": "entity_alphatest"
+      },
+      "textures": {
+        "*": "textures/entity/ice_dragon"
+      },
+      "animations": {
+        "idle": "animation.ice_dragon.idle",
+        "move": "animation.ice_dragon.move"
+      },
+      "animation_controllers": [
+        {
+          "play": "controller.animation.ice_dragon.general"
+        }
+      ]
+    }
+  }
+}
