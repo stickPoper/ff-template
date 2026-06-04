@@ -1,0 +1,155 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "dragon:fire_dragon",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "component_groups": {
+      "dragon:baby": {
+        "minecraft:scale": {
+          "value": 0.5
+        },
+        "minecraft:health": {
+          "value": 10,
+          "max": 10
+        }
+      },
+      "dragon:adolescent": {
+        "minecraft:scale": {
+          "value": 0.75
+        },
+        "minecraft:health": {
+          "value": 20,
+          "max": 20
+        }
+      },
+      "dragon:adult": {
+        "minecraft:scale": {
+          "value": 1.0
+        },
+        "minecraft:health": {
+          "value": 40,
+          "max": 40
+        },
+        "minecraft:attack": {
+          "damage": 8
+        }
+      },
+      "dragon:tamed": {
+        "minecraft:tameable": {
+          "probability": 1.0,
+          "tame_items": ["raw_fish"],
+          "feed_items": ["raw_fish"]
+        },
+        "minecraft:rideable": {
+          "seat_count": 1,
+          "family_types": ["player"],
+          "interact_text": "action.interact.ride"
+        }
+      },
+      "dragon:untamed": {},
+      "dragon:aggressive": {
+        "minecraft:behavior.hurt_by_target": {
+          "priority": 1
+        },
+        "minecraft:behavior.attack": {
+          "priority": 2,
+          "speed_multiplier": 1.2,
+          "attack_types": "melee"
+        }
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": ["dragon", "mob"]
+      },
+      "minecraft:collision_box": {
+        "width": 1.6,
+        "height": 1.6
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:movement": {
+        "value": 0.3
+      },
+      "minecraft:navigation.walk": {
+        "can_path_over_water": true,
+        "can_swim": true,
+        "avoid_water": false
+      },
+      "minecraft:navigation.fly": {
+        "can_path_over_water": true,
+        "avoid_water": false
+      },
+      "minecraft:behavior.random_stroll": {
+        "priority": 7,
+        "speed_multiplier": 0.8
+      },
+      "minecraft:behavior.look_at_player": {
+        "priority": 8,
+        "look_distance": 8.0
+      },
+      "minecraft:behavior.ranged_attack": {
+        "priority": 3,
+        "attack_radius": 16,
+        "speed_multiplier": 1.0
+      },
+      "minecraft:shooter": {
+        "type": "projectile",
+        "def": "dragon:fire_breath"
+      },
+      "minecraft:loot": {
+        "table": "loot_tables/entities/fire_dragon.json"
+      },
+      "minecraft:experience_reward": {
+        "on_death": "query.last_hit_by_player ? 100 * query.get_equipped_item_name(0, 0) == 'diamond_sword' ? 1.25 : 1.0 : 0"
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "add": {
+          "component_groups": ["dragon:baby", "dragon:untamed"]
+        }
+      },
+      "dragon:on_tame": {
+        "add": {
+          "component_groups": ["dragon:tamed"]
+        },
+        "remove": {
+          "component_groups": ["dragon:untamed", "dragon:aggressive"]
+        }
+      },
+      "dragon:agitate": {
+        "add": {
+          "component_groups": ["dragon:aggressive"]
+        }
+      },
+      "dragon:calm": {
+        "remove": {
+          "component_groups": ["dragon:aggressive"]
+        }
+      },
+      "dragon:grow_to_adolescent": {
+        "remove": {
+          "component_groups": ["dragon:baby"]
+        },
+        "add": {
+          "component_groups": ["dragon:adolescent"]
+        }
+      },
+      "dragon:grow_to_adult": {
+        "remove": {
+          "component_groups": ["dragon:adolescent"]
+        },
+        "add": {
+          "component_groups": ["dragon:adult"]
+        }
+      }
+    }
+  }
+}
