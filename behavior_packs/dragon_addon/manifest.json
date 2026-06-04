@@ -1,0 +1,24 @@
+{
+  "format_version": 2,
+  "header": {
+    "description": "Dragon Addon - Rideable, tameable dragons with 4 variants",
+    "name": "Dragon Addon",
+    "uuid": "12345678-1234-5678-1234-567812345678",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "Dragon Behavior Pack",
+      "type": "data",
+      "uuid": "87654321-4321-8765-4321-876543218765",
+      "version": [1, 0, 0]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "0ee6fb3f-1386-42a1-9b16-d17d4dfbd52c",
+      "version": [1, 0, 0]
+    }
+  ]
+}
